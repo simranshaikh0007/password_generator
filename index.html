@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>🔐 PassGen</h1>
+            <p>Create strong and secure passwords</p>
+        </div>
+
+        <div class="password-box">
+            <input type="text"
+                   id="password"
+                   placeholder="Your password appears here"
+                   readonly>
+
+            <button id="copyBtn" class="copy-btn">
+                Copy
+            </button>
+        </div>
+
+        <div class="strength">
+            <div class="strength-info">
+                <span>Password Strength</span>
+                <span id="strengthText">Not generated</span>
+            </div>
+            <div class="strength-bar">
+                <div id="strengthFill"></div>
+            </div>
+        </div>
+
+        <div class="length-section">
+            <label for="length">
+                Password Length:
+                <span id="lengthValue">12</span>
+            </label>
+
+            <input type="range"
+                   id="length"
+                   min="8"
+                   max="32"
+                   value="12">
+        </div>
+
+        <div class="options">
+            <h3>Customize Password</h3>
+
+            <label>
+                <input type="checkbox" id="uppercase" checked>
+                Uppercase Letters (A-Z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="lowercase" checked>
+                Lowercase Letters (a-z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="numbers" checked>
+                Numbers (0-9)
+            </label>
+
+            <label>
+                <input type="checkbox" id="symbols" checked>
+                Special Characters (!@#$)
+            </label>
+        </div>
+
+        <button id="generateBtn" class="generate-btn">
+            Generate Password
+        </button>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
